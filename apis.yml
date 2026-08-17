@@ -1,7 +1,16 @@
 aid: uptime
 name: Uptime
-description: 'Uptime is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai-data. This profile is a lead awaiting the enrichment pipeline.'
+description: 'Uptime (Uptime SAS, Paris, SIREN 822006839) was a French elevator predictive-maintenance
+  company founded in 2016 by Augustin and Amaury Celier. It fitted 4G-connected sensors to existing
+  elevators and used the resulting telemetry to predict failures, dispatch technicians and report
+  availability to building managers, backed by Serena and angels including Jacques-Antoine Granjon,
+  David Amsellem, Yvan Wibaux and Antoine Martin across roughly EUR 10M of funding. The Paris
+  Commercial Court opened a redressement judiciaire on 2022-07-26 and pronounced liquidation
+  judiciaire with a plan de cession to SAS Otis on 2022-10-20; the elevator-maintenance activity and
+  a minority of staff transferred to Otis. The company never published a public developer program,
+  API reference or machine-readable specification, and the uptime.ac domain has since lapsed — it
+  now 301-redirects every path to unrelated third-party sites. This profile is retained as an
+  honest record of a defunct company with no API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/uptime/refs/heads/main/apis.yml
 x-type: company
 x-source: serena-portfolio
@@ -13,12 +22,41 @@ modified: '2026-08-17'
 tags:
 - Company
 - Ai Data
+- Predictive Maintenance
+- Elevators
+- Internet Of Things
+- Proptech
+- Building Management
+- France
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://www.uptime.ac/
+common: []
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 0
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Uptime SAS was put into liquidation judiciaire by the Paris Commercial Court on 2022-10-20 with a
+    plan de cession to SAS Otis, and its uptime.ac domain has since lapsed — every path, including
+    /openapi.json and /.well-known/*, now 301-redirects to https://www.investwithcoin.com/how-it-works/
+    and on to an unrelated gambling site, so the prior common[] Website pointer to www.uptime.ac was
+    removed rather than left pointing at a third party's server.
+  evidence:
+  - url: https://www.uptime.ac/
+    status: 301
+  - url: https://www.uptime.ac/openapi.json
+    status: 301
+  - url: https://www.uptime.ac/.well-known/agent-card.json
+    status: 301
+  - url: https://www.serena.vc/portfolio-profile/uptime/
+    status: 200
+  checked: '2026-08-17'

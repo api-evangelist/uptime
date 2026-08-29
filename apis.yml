@@ -12,6 +12,9 @@ description: 'Uptime (Uptime SAS, Paris, SIREN 822006839) was a French elevator 
   now 301-redirects every path to unrelated third-party sites. This profile is retained as an
   honest record of a defunct company with no API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/uptime/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "The company never published a public developer program, API reference or machine-readable specification, and the uptime.ac domain has since lapsed — it now 301-redirects every path to unrelated third-"
 x-type: company
 x-source: serena-portfolio
 x-tier: stub
